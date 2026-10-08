@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Salar & Andes | Lujo y Tradición en Bolivia</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        boliviaRed: '#D9222A',
+                        boliviaYellow: '#F3B229',
+                        boliviaGreen: '#007A33',
+                        earthBrown: '#78350F',
+                        sandLight: '#FDFBF7',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-sandLight text-gray-800 font-sans antialiased selection:bg-boliviaYellow selection:text-gray-900">
+
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="bg-earthBrown text-white p-2.5 rounded-xl shadow-md">
+                        <i class="fa-solid fa-mountain-sun text-xl text-boliviaYellow"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight text-gray-900">Salar & Andes</span>
+                        <span class="block text-xs uppercase tracking-widest text-earthBrown font-semibold">Hotel & Spa • Bolivia</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-gray-600">
+                    <a href="#inicio" class="hover:text-earthBrown transition">Inicio</a>
+                    <a href="#habitaciones" class="hover:text-earthBrown transition">Habitaciones</a>
+                    <a href="#experiencias" class="hover:text-earthBrown transition">Experiencias</a>
+                    <a href="#gastronomia" class="hover:text-earthBrown transition">Gastronomía</a>
+                    <a href="#ubicacion" class="hover:text-earthBrown transition">Ubicación</a>
+                </nav>
+
+                <!-- CTA Book Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#habitaciones" class="bg-earthBrown hover:bg-amber-900 text-white px-5 py-2.5 rounded-xl text-sm font-semibold shadow-lg shadow-amber-900/20 transition transform hover:-translate-y-0.5">
+                        Reservar Ahora
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="#inicio" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50">Inicio</a>
+            <a href="#habitaciones" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50">Habitaciones</a>
+            <a href="#experiencias" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50">Experiencias</a>
+            <a href="#gastronomia" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50">Gastronomía</a>
+            <a href="#ubicacion" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50">Ubicación</a>
+            <div class="pt-2">
+                <a href="#habitaciones" class="w-full text-center block bg-earthBrown text-white px-4 py-3 rounded-xl font-semibold shadow-md">Reservar Ahora</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative pt-28 pb-20 md:pt-36 md:pb-32 overflow-hidden bg-gradient-to-b from-amber-50 to-sandLight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-amber-100 text-amber-800 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-star text-boliviaYellow"></i>
+                        <span>Hospitalidad Andina 5 Estrellas</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
+                        Descubre la Magia de los <span class="text-earthBrown">Andes Bolivianos</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0">
+                        Sumérgete en la belleza imponente del Salar de Uyuni y los cañones de Tupiza. Un refugio de lujo rústico con diseño sostenible, vistas estelares y confort absoluto.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#habitaciones" class="bg-earthBrown hover:bg-amber-900 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-amber-900/20 text-center transition transform hover:-translate-y-0.5">
+                            Ver Habitaciones & Tarifas
+                        </a>
+                        <a href="#experiencias" class="bg-white hover:bg-gray-50 text-gray-800 border border-gray-300 font-semibold px-8 py-4 rounded-xl text-center transition">
+                            Explorar Tours
+                        </a>
+                    </div>
+                    <!-- Quick badges -->
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-gray-200/80 max-w-lg mx-auto lg:mx-0">
+                        <div class="text-center lg:text-left">
+                            <span class="block text-2xl font-bold text-gray-900">3,800m</span>
+                            <span class="text-xs text-gray-500 font-medium">Sobre el nivel del mar</span>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <span class="block text-2xl font-bold text-gray-900">100%</span>
+                            <span class="text-xs text-gray-500 font-medium">Arquitectura de Sal y Adobe</span>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <span class="block text-2xl font-bold text-gray-900">4.9/5</span>
+                            <span class="text-xs text-gray-500 font-medium">Opiniones de Huéspedes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image Carousel / Collage -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -top-4 -left-4 w-72 h-72 bg-boliviaYellow/20 rounded-full filter blur-3xl"></div>
+                        <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-earthBrown/20 rounded-full filter blur-3xl"></div>
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                            <img src="https://placehold.co/600x750/78350F/FFF?text=Hotel+Salar+Andes" 
+                                 onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80'" 
+                                 alt="Hotel en Bolivia" class="w-full h-[450px] object-cover hover:scale-105 transition duration-700">
+                        </div>
+                        <!-- Floating Badge Card -->
+                        <div class="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-gray-100 flex items-center space-x-3 max-w-xs">
+                            <div class="bg-amber-100 text-earthBrown p-3 rounded-xl">
+                                <i class="fa-solid fa-mug-hot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-gray-800">Desayuno Andino Incluido</h4>
+                                <p class="text-[11px] text-gray-500">Quinua real, café orgánico y frutos de altura.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 -mt-10 relative z-20">
+        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100">
+            <form id="booking-search-form" class="grid grid-cols-1 md:grid-cols-4 gap-6 items-end">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Llegada</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+                            <i class="fa-regular fa-calendar"></i>
+                        </span>
+                        <input type="date" id="check-in" class="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium text-gray-800 focus:ring-2 focus:ring-earthBrown focus:outline-none">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Salida</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+                            <i class="fa-regular fa-calendar"></i>
+                        </span>
+                        <input type="date" id="check-out" class="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium text-gray-800 focus:ring-2 focus:ring-earthBrown focus:outline-none">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Huéspedes</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+                            <i class="fa-solid fa-user-group"></i>
+                        </span>
+                        <select id="guests-count" class="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium text-gray-800 focus:ring-2 focus:ring-earthBrown focus:outline-none">
+                            <option value="1">1 Huésped</option>
+                            <option value="2" selected>2 Huéspedes (Pareja)</option>
+                            <option value="3">3 Huéspedes (Familiar)</option>
+                            <option value="4">4+ Huéspedes (Suite)</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" onclick="filterRooms()" class="w-full bg-earthBrown hover:bg-amber-900 text-white font-semibold py-3 px-6 rounded-xl transition shadow-md shadow-amber-900/20 flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>Consultar Disponibilidad</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="habitaciones" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-earthBrown font-bold uppercase tracking-widest text-xs bg-amber-100 px-3 py-1 rounded-full">Alojamiento Exclusivo</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-3">Habitaciones y Suites de Ensueño</h2>
+            <p class="text-gray-600 mt-4">Diseñadas con materiales locales, textiles tradicionales bolivianos y todas las comodidades modernas para garantizar un descanso reparador a gran altitud.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Room 1 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 flex flex-col justify-between hover:shadow-xl transition duration-300">
+                <div>
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://placehold.co/600x400/D9222A/FFF?text=Suite+Salar" 
+                             onerror="this.src='https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=600&q=80'" 
+                             alt="Suite Salar" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 right-4 bg-earthBrown text-white text-xs font-bold px-3 py-1 rounded-full shadow">Exclusiva</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Suite Salar de Uyuni</h3>
+                            <div class="text-right">
+                                <span class="text-2xl font-extrabold text-earthBrown">$180</span>
+                                <span class="text-xs text-gray-500 block">/ noche</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Muebles tallados en bloques de sal natural, cama king-size con mantas de alpaca y vista panorámica al horizonte blanco.</p>
+                        <div class="flex flex-wrap gap-2 pt-2 border-t border-gray-100 text-xs text-gray-600">
+                            <span class="bg-gray-100 px-2.5 py-1 rounded-md"><i class="fa-solid fa-wifi mr-1 text-earthBrown"></i> Wi-Fi Satelital</span>
+                            <span class="bg-gray-100 px-2.5 py-1 rounded-md"><i class="fa-solid fa-mug-hot mr-1 text-earthBrown"></i> Desayuno</span>
+                            <span class="bg-gray-100 px-2.5 py-1 rounded-md"><i class="fa-solid fa-fire mr-1 text-earthBrown"></i> Calefacción</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="openBookingModal('Suite Salar de Uyuni', 180)" class="w-full bg-amber-50 hover:bg-earthBrown hover:text-white text-earthBrown font-semibold py-3 rounded-xl transition border border-earthBrown/30 text-center text-sm">
+                        Reservar Suite Salar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Room 2 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 flex flex-col justify-between hover:shadow-xl transition duration-300">
+                <div>
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://placehold.co/600x400/F3B229/333?text=Habitacion+Andina" 
+                             onerror="this.src='https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80'" 
+                             alt="Habitación Andina" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 right-4 bg-boliviaYellow text-gray-900 text-xs font-bold px-3 py-1 rounded-full shadow">Popular</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Habitación Doble Andina</h3>
+                            <div class="text-right">
+                                <span class="text-2xl font-extrabold text-earthBrown">$120</span>
+                                <span class="text-xs text-gray-500 block">/ noche</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Inspirada en la cultura andina con tonos cálidos, artesanías locales, baño privado con agua caliente y camas dobles ultra cómodas.</p>
+                        <div class="flex flex-wrap gap-2 pt-2 border-t border-gray-100 text-xs text-gray-600">
+                            <span class="bg-gray-100 px-2.5 py-1 rounded-md"><i class="fa-solid fa-wifi mr-1 text-earthBrown"></i> Wi-Fi</span>
+                            <span class="bg-gray-100 px-2.5 py-1 rounded-md"><i class="fa-solid fa-mug-hot mr-1 text-earthBrown"></i> Desayuno</span>
+                            <span class="bg-gray-100 px-2.5 py-1 rounded-md"><i class="fa-solid fa-shower mr-1 text-earthBrown"></i> Baño Privado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="openBookingModal('Habitación Doble Andina', 120)" class="w-full bg-amber-50 hover:bg-earthBrown hover:text-white text-earthBrown font-semibold py-3 rounded-xl transition border border-earthBrown/30 text-center text-sm">
+                        Reservar Doble Andina
+                    </button>
+                </div>
+            </div>
+
+            <!-- Room 3 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 flex flex-col justify-between hover:shadow-xl transition duration-300">
+                <div>
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://placehold.co/600x400/007A33/FFF?text=Suite+Familiar+Tupiza" 
+                             onerror="this.src='https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=80'" 
+                             alt="Suite Familiar" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 right-4 bg-earthBrown text-white text-xs font-bold px-3 py-1 rounded-full shadow">Familiar</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Suite Familiar Tupiza</h3>
+                            <div class="text-right">
+                                <span class="text-2xl font-extrabold text-earthBrown">$220</span>
+                                <span class="text-xs text-gray-500 block">/ noche</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Espacio amplio de dos ambientes ideal para familias. Vistas hacia los impresionantes cañones colorados y formaciones rocosas.</p>
+                        <div class="flex flex-wrap gap-2 pt-2 border-t border-gray-100 text-xs text-gray-600">
+                            <span class="bg-gray-100 px-2.5 py-1 rounded-md"><i class="fa-solid fa-wifi mr-1 text-earthBrown"></i> Wi-Fi</span>
+                            <span class="bg-gray-100 px-2.5 py-1 rounded-md"><i class="fa-solid fa-mug-hot mr-1 text-earthBrown"></i> Desayuno</span>
+                            <span class="bg-gray-100 px-2.5 py-1 rounded-md"><i class="fa-solid fa-tv mr-1 text-earthBrown"></i> Smart TV</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="openBookingModal('Suite Familiar Tupiza', 220)" class="w-full bg-amber-50 hover:bg-earthBrown hover:text-white text-earthBrown font-semibold py-3 rounded-xl transition border border-earthBrown/30 text-center text-sm">
+                        Reservar Familiar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencias" class="py-24 bg-amber-900/5 border-y border-amber-900/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-earthBrown font-bold uppercase tracking-widest text-xs bg-amber-100 px-3 py-1 rounded-full">Turismo Auténtico</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-3">Experiencias Inolvidables en Bolivia</h2>
+                <p class="text-gray-600 mt-4">Organizamos excursiones privadas y guiadas hacia los tesoros más emblemáticos del altiplano y valles bolivianos con vehículos 4x4 especializados.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Exp 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://placehold.co/600x350/F3B229/333?text=Salar+de+Uyuni" 
+                             onerror="this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80'" 
+                             alt="Salar de Uyuni" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white font-bold text-xl">Salar de Uyuni e Isla Incahuasi</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-600 mb-4">Atraviesa el desierto de sal más grande del mundo, visita los ojos de sal y disfruta de un atardecer mágico con vino boliviano.</p>
+                        <div class="flex items-center justify-between text-xs font-semibold text-earthBrown">
+                            <span><i class="fa-regular fa-clock mr-1"></i> Duración: 1 Día completo</span>
+                            <span>Guía Bilingüe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exp 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://placehold.co/600x350/78350F/FFF?text=Canones+Tupiza" 
+                             onerror="this.src='https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80'" 
+                             alt="Cañones de Tupiza" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white font-bold text-xl">Valle de los Machos y Cañones</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-600 mb-4">Cabalgata o caminata por formaciones rocosas rojizas espectaculares que sirvieron de refugio para Butch Cassidy y Sundance Kid.</p>
+                        <div class="flex items-center justify-between text-xs font-semibold text-earthBrown">
+                            <span><i class="fa-regular fa-clock mr-1"></i> Duración: 4 a 6 horas</span>
+                            <span>Caballos / 4x4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exp 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://placehold.co/600x350/007A33/FFF?text=Lagunas+Colores" 
+                             onerror="this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80'" 
+                             alt="Lagunas Andinas" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white font-bold text-xl">Lagunas Colorada y Verde</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-600 mb-4">Expedición de varios días observando flamencos rosados, géiseres humeantes (Sol de Mañana) y aguas termales volcánicas.</p>
+                        <div class="flex items-center justify-between text-xs font-semibold text-earthBrown">
+                            <span><i class="fa-regular fa-clock mr-1"></i> Expedición 3 Días</span>
+                            <span>Todo Incluido</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gastronomia" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-earthBrown font-bold uppercase tracking-widest text-xs bg-amber-100 px-3 py-1 rounded-full">Sabores de Altura</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">Restaurante "Kanka & Quinua"</h2>
+                <p class="text-gray-600">
+                    Nuestra propuesta culinaria fusiona ingredientes ancestrales bolivianos como la quinua real, papas nativas, cordero patagónico y carnes de camélidos con técnicas gourmet internacionales.
+                </p>
+                <div class="space-y-4 pt-2">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-amber-100 text-earthBrown p-3 rounded-xl flex-shrink-0">
+                            <i class="fa-solid fa-wine-glass-empty text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Vinos de Altura de Tarija</h4>
+                            <p class="text-sm text-gray-500">Carta seleccionada de vinos cultivados a más de 2,000 metros sobre el nivel del mar.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-amber-100 text-earthBrown p-3 rounded-xl flex-shrink-0">
+                            <i class="fa-solid fa-bowl-food text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Desayuno Energético Andino</h4>
+                            <p class="text-sm text-gray-500">Panes artesanales, infusiones de coca y muña para combatir el soroche, miel de abeja local y frutas frescas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="https://placehold.co/400x500/78350F/FFF?text=Gastronomia" 
+                     onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=400&q=80'" 
+                     alt="Plato gourmet" class="rounded-2xl shadow-lg w-full h-72 object-cover transform translate-y-4">
+                <img src="https://placehold.co/400x500/F3B229/333?text=Vinos+Bolivia" 
+                     onerror="this.src='https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=400&q=80'" 
+                     alt="Vinos andinos" class="rounded-2xl shadow-lg w-full h-72 object-cover transform -translate-y-4">
+            </div>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-earthBrown font-bold uppercase tracking-widest text-xs bg-amber-100 px-3 py-1 rounded-full">¿Cómo Llegar?</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Ubicación Privilegiada en Bolivia</h2>
+                    <p class="text-gray-600">
+                        Ubicados estratégicamente en el sur de Bolivia, ofrecemos traslados privados desde los aeropuertos de Uyuni, Tarija o La Paz, así como estacionamiento privado seguro para vehículos 4x4.
+                    </p>
+                    <div class="space-y-3 text-sm text-gray-700">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-location-dot text-earthBrown text-lg w-6"></i>
+                            <span>Av. de los Andes No. 450, Centro Histórico / Zona Turística</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-plane text-earthBrown text-lg w-6"></i>
+                            <span>A 3 horas en transfer privado del Aeropuerto de Uyuni (UYU)</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-phone text-earthBrown text-lg w-6"></i>
+                            <span>+591 4 694 2200 / WhatsApp: +591 71234567</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-amber-50 rounded-3xl p-6 border border-amber-100 shadow-inner">
+                    <div class="bg-gray-200 rounded-2xl h-80 flex items-center justify-center overflow-hidden relative shadow">
+                        <!-- Simulated map view -->
+                        <img src="https://placehold.co/700x400/E5E7EB/4B5563?text=Mapa+Bolivia+-+Salar+%26+Andes+Hotel" 
+                             onerror="this.src='https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=700&q=80'" 
+                             alt="Mapa" class="w-full h-full object-cover opacity-80">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-earthBrown text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center space-x-2 border-2 border-white animate-bounce">
+                                <i class="fa-solid fa-hotel text-boliviaYellow text-xl"></i>
+                                <span class="font-bold text-sm">Hotel Salar & Andes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="bg-boliviaYellow text-gray-900 p-2 rounded-xl">
+                            <i class="fa-solid fa-mountain-sun text-xl"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white tracking-tight">Salar & Andes</span>
+                    </div>
+                    <p class="text-sm text-gray-400">
+                        El mejor refugio de confort y autenticidad para tu travesía por los paisajes más bellos de Bolivia.
+                    </p>
+                    <div class="flex space-x-4 text-gray-400">
+                        <a href="#" class="hover:text-boliviaYellow transition"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+                        <a href="#" class="hover:text-boliviaYellow transition"><i class="fa-brands fa-instagram text-lg"></i></a>
+                        <a href="#" class="hover:text-boliviaYellow transition"><i class="fa-brands fa-tripadvisor text-lg"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Enlaces Rápidos</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#inicio" class="hover:text-white transition">Inicio</a></li>
+                        <li><a href="#habitaciones" class="hover:text-white transition">Habitaciones</a></li>
+                        <li><a href="#experiencias" class="hover:text-white transition">Tours & Experiencias</a></li>
+                        <li><a href="#gastronomia" class="hover:text-white transition">Gastronomía Andina</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Destinos Bolivia</h4>
+                    <ul class="space-y-2.5 text-sm text-gray-400">
+                        <li>Salar de Uyuni</li>
+                        <li>Cañones de Tupiza</li>
+                        <li>Laguna Colorada</li>
+                        <li>Isla Incahuasi</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Newsletter</h4>
+                    <p class="text-sm text-gray-400 mb-4">Suscríbete para recibir ofertas exclusivas para viajeros.</p>
+                    <form onsubmit="event.preventDefault(); showToast('¡Gracias por suscribirte!');" class="space-y-2">
+                        <input type="email" placeholder="Tu correo electrónico" required class="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-xl text-sm text-white focus:outline-none focus:border-boliviaYellow">
+                        <button type="submit" class="w-full bg-earthBrown hover:bg-amber-800 text-white font-semibold py-2.5 rounded-xl text-sm transition">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+                <p>&copy; 2026 Hotel Salar & Andes. Todos los derechos reservados. Hecho con orgullo en Bolivia.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-gray-400 transition">Política de Privacidad</a>
+                    <a href="#" class="hover:text-gray-400 transition">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="booking-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm hidden px-4">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-lg w-full p-6 sm:p-8 relative transform transition-all">
+            <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="mb-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-earthBrown bg-amber-100 px-3 py-1 rounded-full">Reserva Segura</span>
+                <h3 id="modal-room-title" class="text-2xl font-bold text-gray-900 mt-2">Reservar Habitación</h3>
+                <p id="modal-room-price" class="text-sm text-gray-500 mt-1">Tarifa estimada</p>
+            </div>
+            <form onsubmit="handleBookingSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Nombre Completo</label>
+                    <input type="text" id="guest-name" required placeholder="Ej. Juan Pérez" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-earthBrown focus:outline-none">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Fecha de Entrada</label>
+                        <input type="date" id="modal-in" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-earthBrown focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Fecha de Salida</label>
+                        <input type="date" id="modal-out" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-earthBrown focus:outline-none">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Correo Electrónico</label>
+                    <input type="email" id="guest-email" required placeholder="correo@ejemplo.com" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-earthBrown focus:outline-none">
+                </div>
+                <div class="pt-2">
+                    <button type="submit" class="w-full bg-earthBrown hover:bg-amber-900 text-white font-semibold py-3.5 rounded-xl shadow-lg transition">
+                        Confirmar Solicitud de Reserva
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300 bg-gray-900 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center space-x-3">
+        <i class="fa-solid fa-circle-check text-boliviaYellow text-xl"></i>
+        <span id="toast-message" class="text-sm font-medium">¡Operación exitosa!</span>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Set default dates in form inputs
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 2);
+        
+        const formatDate = (d) => d.toISOString().split('T')[0];
+        
+        document.getElementById('check-in').value = formatDate(today);
+        document.getElementById('check-out').value = formatDate(tomorrow);
+        document.getElementById('modal-in').value = formatDate(today);
+        document.getElementById('modal-out').value = formatDate(tomorrow);
+
+        // Booking Modal Logic
+        let currentSelectedRoom = '';
+        let currentRoomPrice = 0;
+
+        function openBookingModal(roomName, price) {
+            currentSelectedRoom = roomName;
+            currentRoomPrice = price;
+            document.getElementById('modal-room-title').innerText = `Reservar: ${roomName}`;
+            document.getElementById('modal-room-price').innerText = `$${price} USD por noche + Desayuno andino incluido`;
+            document.getElementById('booking-modal').classList.remove('hidden');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('booking-modal').classList.add('hidden');
+        }
+
+        function handleBookingSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('guest-name').value;
+            closeBookingModal();
+            showToast(`¡Gracias ${name}! Hemos recibido tu solicitud para ${currentSelectedRoom}. Te contactaremos pronto.`);
+        }
+
+        function filterRooms() {
+            showToast('Mostrando disponibilidad actualizada para las fechas seleccionadas.');
+            const roomsSection = document.getElementById('habitaciones');
+            roomsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Toast Notification System
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const msgEl = document.getElementById('toast-message');
+            msgEl.innerText = message;
+            
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 4000);
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 30) {
+                navbar.classList.add('shadow-md', 'bg-white/95');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
